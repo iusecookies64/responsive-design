@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function NavBar() {
+  const navigate = useNavigate();
   const dropdown = useRef();
   return (
     <div className="d-flex flex-row justify-content-around align-items-centershadow nav-bar">
@@ -57,10 +59,10 @@ export default function NavBar() {
             cursor: "pointer",
           }}
           onMouseEnter={() => {
-            dropdown.current.classList.remove("d-none");
+            dropdown.current.classList.toggle("d-none");
           }}
           onMouseLeave={() => {
-            dropdown.current.classList.add("d-none");
+            dropdown.current.classList.toggle("d-none");
           }}
         >
           <div
@@ -81,7 +83,7 @@ export default function NavBar() {
           {/* dropdown list start */}
           <div
             ref={dropdown}
-            className="position-absolute d-hidden top-100 bg-white border shadow-sm "
+            className="position-absolute d-none top-100 bg-white border shadow-sm "
             style={{ color: "#6D747A", width: "220px", zIndex: "10" }}
           >
             <div className="p-2 border-bottom ">People - Community</div>
@@ -160,6 +162,7 @@ export default function NavBar() {
             fontSize: "16px",
             fontWeight: "500",
           }}
+          onClick={() => navigate("/page2")}
         >
           Sign In
         </button>

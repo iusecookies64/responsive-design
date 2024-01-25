@@ -81,7 +81,7 @@ export default function NavBar2() {
           {/* dropdown list start */}
           <div
             ref={dropdown}
-            className="position-absolute d-hidden top-100 bg-white border shadow-sm "
+            className="position-absolute d-none top-100 bg-white border shadow-sm "
             style={{ color: "#6D747A", width: "220px", zIndex: "10" }}
           >
             <div className="p-2 border-bottom ">People - Community</div>
