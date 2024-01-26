@@ -124,6 +124,16 @@ $font-sizes: (
   background-color: #0096c8;
 }
 
+.scroll-top {
+  color: #8064a2;
+  background-color: white;
+}
+
+.scroll-top:hover {
+  background-color: #8064a2;
+  color: white;
+}
+
 @media (max-width: 1200px) {
   .nav-bar {
     height: 48px; /* Adjust the height for medium screens */

@@ -5,7 +5,10 @@ export default function NavBar() {
   const navigate = useNavigate();
   const dropdown = useRef();
   return (
-    <div className="d-flex flex-row justify-content-around align-items-centershadow nav-bar">
+    <div
+      className="d-flex flex-row justify-content-around align-items-centershadow nav-bar position-relative bg-white"
+      style={{ zIndex: 1 }}
+    >
       <div className="d-flex flex-row align-items-center gap-4 d-lg-hidden py-2">
         <div>
           <img
